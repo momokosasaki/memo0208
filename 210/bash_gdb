@@ -1,0 +1,48 @@
+student@cloudlab-Standard-PC-i440FX-PIIX-1996:~$ gdb bash
+GNU gdb (Ubuntu 9.1-0ubuntu1) 9.1
+Copyright (C) 2020 Free Software Foundation, Inc.                                                                                       
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from bash...
+(No debugging symbols found in bash)
+(gdb) start
+Temporary breakpoint 1 at 0x2ebd0
+Starting program: /usr/bin/bash 
+
+Temporary breakpoint 1, 0x0000555555582bd0 in main ()
+(gdb) i r
+rax            0x555555582bd0      93824992422864
+rbx            0x555555631690      93824993138320
+rcx            0x555555631690      93824993138320
+rdx            0x7fffffffe538      140737488348472
+rsi            0x7fffffffe528      140737488348456
+rdi            0x1                 1
+rbp            0x0                 0x0
+rsp            0x7fffffffe438      0x7fffffffe438
+r8             0x0                 0
+r9             0x7ffff7fe0d50      140737354009936
+r10            0x7ffff7ffcf68      140737354125160
+r11            0x206               518
+r12            0x555555584430      93824992429104
+r13            0x7fffffffe520      140737488348448
+r14            0x0                 0
+r15            0x0                 0
+rip            0x555555582bd0      0x555555582bd0 <main>
+eflags         0x246               [ PF ZF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
