@@ -1,0 +1,2 @@
+https://0xdf.gitlab.io/
+https://github.com/camercu/oscp-prep/blob/main/CHEATSHEET.md
