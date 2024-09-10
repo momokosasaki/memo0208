@@ -1,0 +1,8 @@
+ps
+getpcaps 276
+ping 8.8.8.8 -c 1
+
+
+2
+mount | grep sysrq-trigger
+mount -o remount,rw /proc/sysrq-trigger

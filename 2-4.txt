@@ -1,0 +1,28 @@
+mkdir work
+vim Dockerfile
+
+FROM ubuntu:22.04
+
+RUN apt update&&apt install -y curl && echo "#!/bin/bash\n echo 'Evil Curl!'" > /usr/bin/curl
+RUN useradd -m ubuntu
+USER ubuntu
+WORKDIR /home/ubuntu
+
+
+docker build -t my-image .
+mkdir dump
+docker save my-image:latest -o dump/my-image.tar
+
+cd dump
+tar -xf my-image.tar
+vim <16進３２バイト>.json
+
+&& echo "#!/bin/bash\n echo 'Evil Curl!'"の個所を消す
+
+rm my-image.tar
+cd ..
+tar -C dump -cf my-image.tar .
+docker load -i my-image.tar
+docker history my-image:latest --no-trunc
+
+docker run --rm -it my-image:latest /bin/bash

